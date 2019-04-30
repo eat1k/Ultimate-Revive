@@ -1,0 +1,96 @@
+[en]
+UR_ERROR_USAGE = Usage: %s <player/T/CT/ALL> (<hp> <armor>)
+UR_REVIVED_MSG = ^4[UV] ^1You have revived ^3%n
+UR_REVIVED_PLAYER_TARGET = ^4[UV] ^1You were revived by ^4%n
+UR_REVIVED_MSG_ALL = ^4[UV] ^1Admin ^4%n ^1has revived ^3%n
+UR_MSG_T = all terrorists
+UR_MSG_CT = all counter-terrorists
+UR_MSG_ALL = all players
+UR_ERROR_ALIVE = * The player is already alive
+UR_ERROR_TEAM = * The player is in the wrong team
+UR_REVIVED_ONE_LOG = "%n" (<%s> <%s>) -----> "%n" (<%s> <%s>)
+UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
+
+UR_MENU_TITLE = Selecciona quien será revivido
+UR_MENU_HEALTH = HP: \y%0.f
+UR_MENU_ARMOR = Armadura: \y%d
+UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No players found to revive
+UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1You didn't enter anything, try again
+UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1You entered not a number, try again
+
+UR_BACK = Atrás
+UR_NEXT = Siguiente
+UR_EXIT = Salir
+
+[es]
+UR_ERROR_USAGE = Uso: %s <player/T/CT/ALL> (<hp> <armor>)
+UR_REVIVED_MSG = ^4[UV] ^1Ha revivido a ^3%n
+UR_REVIVED_PLAYER_TARGET = ^4[UV] ^1Ha sido revivido por ^4%n
+UR_REVIVED_MSG_ALL = ^4[UV] ^1Admin ^4%n ^1ha revivido a ^3%n
+UR_MSG_T = todos los terroristas
+UR_MSG_CT = todos los counter-terroristas
+UR_MSG_ALL = todos los jugadores
+UR_ERROR_ALIVE = * El jugador ya está vivo
+UR_ERROR_TEAM = * El jugador está en el equipo incorrecto
+UR_REVIVED_ONE_LOG = "%n" (<%s> <%s>) -----> "%n" (<%s> <%s>)
+UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
+
+UR_MENU_TITLE = Choose who will be respawned
+UR_MENU_HEALTH = Health: \y%0.f
+UR_MENU_ARMOR = Armor: \y%d
+UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No se han encontrado jugadores para revivir
+UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1No has introducido nada, prueba de nuevo
+UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1No has introducido un número, prueba de nuevo
+
+UR_BACK = Back
+UR_NEXT = Next
+UR_EXIT = Exit
+
+[ru]
+UR_ERROR_USAGE = Использование: %s <player/T/CT/ALL> (<hp> <armor>)
+UR_REVIVED_MSG = ^4[UR] ^1Вы воскресили ^3%n
+UR_REVIVED_PLAYER_TARGET = ^4[UR] ^1Вас воскресил администратор ^4%n
+UR_REVIVED_MSG_ALL = ^4[UR] ^1Админ ^4%n ^1воскресил(а) ^3%n
+UR_MSG_T = всех террористов
+UR_MSG_CT = всех контр-террористов
+UR_MSG_ALL = всех игроков
+UR_ERROR_ALIVE = * Игрок уже жив
+UR_ERROR_TEAM = * Игрок находится в некорректной команде
+UR_REVIVED_ONE_LOG = "%n" (<%s> <%s>) -----> "%n" (<%s> <%s>)
+UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
+
+UR_MENU_TITLE = Выберите кого возродить
+UR_MENU_HEALTH = Здоровье: \y%0.f
+UR_MENU_ARMOR = Броня: \y%d
+UR_ERROR_MENU_PLAYERS = ^3[UR] ^1Не найдено игроков для воскрешения
+UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1Вы ничего не ввели, попробуйте снова
+UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1Вы ввели не число, попробуйте снова
+
+UR_BACK = Назад
+UR_NEXT = Далее
+UR_EXIT = Выход
+
+[tr]
+UR_ERROR_USAGE = Usage: %s <player/T/CT/ALL> (<hp> <armor>)
+UR_ERROR_USAGE = Kullanim: %s <oyuncu/T/CT/HERKES> (<can> <zirh>)
+UR_REVIVED_MSG = ^4[UV] ^3%n ^1oyuncusunu canlandirdin
+UR_REVIVED_PLAYER_TARGET = ^4[UV] ^3%n ^1tarafindan canlandirildin
+UR_REVIVED_MSG_ALL = ^4[UV] ^1Admin ^3%n ^4%n ^1oyuncusunu canlandirdi
+UR_MSG_T = butun teroristler
+UR_MSG_CT = butun anti-teroristler
+UR_MSG_ALL = butun oyuncular
+UR_ERROR_ALIVE = * Oyuncu zaten canli
+UR_ERROR_TEAM = * Oyuncu yanlis takimda
+UR_REVIVED_ONE_LOG = "%n" (<%s> <%s>) -----> "%n" (<%s> <%s>)
+UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
+
+UR_MENU_TITLE = Canlandirilacak kisiyi sec
+UR_MENU_HEALTH = Can: \y%0.f
+UR_MENU_ARMOR = Zirh: \y%d
+UR_ERROR_MENU_PLAYERS = ^3[UR] ^1Canlandirmak icin oyuncu bulunamadi
+UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1Hicbir sey girmedin, tekrar dene
+UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1Bir numara girmedin, tekrar dene
+
+UR_BACK = Geri
+UR_NEXT = Diger
+UR_EXIT = Cikis
