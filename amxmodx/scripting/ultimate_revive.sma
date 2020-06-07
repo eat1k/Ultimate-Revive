@@ -9,7 +9,7 @@
 #pragma semicolon 1
 
 public stock const PluginName[] = "Ultimate Revive";
-public stock const PluginVersion[] = "1.0.0";
+public stock const PluginVersion[] = "1.0.7";
 public stock const PluginAuthor[] = "twisterniq";
 public stock const PluginURL[] = "https://github.com/twisterniq/Ultimate-Revive";
 public stock const PluginDescription[] = "Adds the ability to respawn a player/team/everyone through console command or menu with the option to set HP and armor";
@@ -467,6 +467,7 @@ func_ReviveMenu(const id, iPage, bool:bChat = false)
 			func_ReviveMenu(id, g_iMenuPosition[id]);
 		}
 	}
+
 	return PLUGIN_HANDLED;
 }
 
