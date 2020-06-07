@@ -127,7 +127,7 @@ public client_putinserver(id)
 
 @func_ConsoleCmdRevive(const id)
 {
-	if(!has_flag(id, g_eCvar[CVAR_ACCESS]))
+	if (!has_flag(id, g_eCvar[CVAR_ACCESS]))
 	{
 		console_print(id, "%l", "UR_ERROR_HAVE_NO_ACCESS");
 		return PLUGIN_HANDLED;
@@ -138,7 +138,7 @@ public client_putinserver(id)
 	new szArgName[MAX_NAME_LENGTH];
 	read_argv(arg_name, szArgName, charsmax(szArgName));
 
-	if(!szArgName[0])
+	if (!szArgName[0])
 	{
 		console_print(id, "%l", "UR_ERROR_USAGE", CONSOLE_MENU_COMMAND);
 		return PLUGIN_HANDLED;
@@ -151,9 +151,9 @@ public client_putinserver(id)
 	new Float:flHealth, iArmor;
 	new bool:bNeedSetHealth, bool:bNeedSetArmor, ArmorType:iArmorType;
 
-	if(szArgHealth[0])
+	if (szArgHealth[0])
 	{
-		if(!is_digit_arg(szArgHealth))
+		if (!is_digit_arg(szArgHealth))
 		{
 			console_print(id, "%l", "UR_ERROR_USAGE", CONSOLE_MENU_COMMAND);
 			return PLUGIN_HANDLED;
@@ -163,9 +163,9 @@ public client_putinserver(id)
 		flHealth = floatclamp(str_to_float(szArgHealth), 1.0, 2147483520.0);
 	}
 
-	if(szArgArmor[0] > 0)
+	if (szArgArmor[0] > 0)
 	{
-		if(!is_digit_arg(szArgArmor))
+		if (!is_digit_arg(szArgArmor))
 		{
 			console_print(id, "%l", "UR_ERROR_USAGE", CONSOLE_MENU_COMMAND);
 			return PLUGIN_HANDLED;
@@ -181,15 +181,15 @@ public client_putinserver(id)
 
 	enum { SELECTED_T, SELECTED_CT, SELECTED_ALL, SELECTED_TARGET };
 
-	if(!strcmp(szArgName, "T"))
+	if (!strcmp(szArgName, "T"))
 	{
 		iSelected = SELECTED_T;
 	}
-	else if(!strcmp(szArgName, "CT"))
+	else if (!strcmp(szArgName, "CT"))
 	{
 		iSelected = SELECTED_CT;
 	}
-	else if(!strcmp(szArgName, "ALL"))
+	else if (!strcmp(szArgName, "ALL"))
 	{
 		iSelected = SELECTED_ALL;
 	}
@@ -198,14 +198,14 @@ public client_putinserver(id)
 		iSelected = SELECTED_TARGET;
 	}
 
-	if(SELECTED_T <= iSelected <= SELECTED_ALL)
+	if (SELECTED_T <= iSelected <= SELECTED_ALL)
 	{
 		new iPlayers[MAX_PLAYERS], iPlayerCount, i, iPlayer;
 		get_players_ex(iPlayers, iPlayerCount, !g_eCvar[CVAR_BOT_SUPPORT] ? (GetPlayers_ExcludeAlive|GetPlayers_ExcludeBots|GetPlayers_ExcludeHLTV) : (GetPlayers_ExcludeAlive|GetPlayers_ExcludeHLTV));
 
 		new iCount;
 
-		for(i = 0; i < iPlayerCount; i++)
+		for (i = 0; i < iPlayerCount; i++)
 		{
 			iPlayer = iPlayers[i];
 
@@ -213,21 +213,21 @@ public client_putinserver(id)
 			{
 				case SELECTED_T:
 				{
-					if(get_member(iPlayer, m_iTeam) != TEAM_TERRORIST)
+					if (get_member(iPlayer, m_iTeam) != TEAM_TERRORIST)
 					{
 						continue;
 					}
 				}
 				case SELECTED_CT:
 				{
-					if(get_member(iPlayer, m_iTeam) != TEAM_CT)
+					if (get_member(iPlayer, m_iTeam) != TEAM_CT)
 					{
 						continue;
 					}
 				}
 				case SELECTED_ALL:
 				{
-					if(!(TEAM_TERRORIST <= get_member(iPlayer, m_iTeam) <= TEAM_CT))
+					if (!(TEAM_TERRORIST <= get_member(iPlayer, m_iTeam) <= TEAM_CT))
 					{
 						continue;
 					}
@@ -237,28 +237,28 @@ public client_putinserver(id)
 			iCount++;
 			rg_round_respawn(iPlayer);
 
-			if(bNeedSetHealth)
+			if (bNeedSetHealth)
 			{
 				set_entvar(iPlayer, var_health, flHealth);
 			}
 
-			if(bNeedSetArmor)
+			if (bNeedSetArmor)
 			{
 				rg_set_user_armor(iPlayer, iArmor, iArmorType);
 			}
 
-			if(g_eCvar[CVAR_MESSAGES] == MESSAGE_SHOW_USER_TARGET)
+			if (g_eCvar[CVAR_MESSAGES] == MESSAGE_SHOW_USER_TARGET)
 			{
 				client_print_color(iPlayer, print_team_default, "%l", "UR_REVIVED_PLAYER_TARGET", id);
 			}
 		}
 
-		if(!iCount)
+		if (!iCount)
 		{
 			return PLUGIN_HANDLED;
 		}
 
-		if(!g_eCvar[CVAR_MESSAGES] && !g_eCvar[CVAR_LOG])
+		if (!g_eCvar[CVAR_MESSAGES] && !g_eCvar[CVAR_LOG])
 		{
 			return PLUGIN_HANDLED;
 		}
@@ -293,7 +293,7 @@ public client_putinserver(id)
 			}
 		}
 
-		if(g_eCvar[CVAR_LOG])
+		if (g_eCvar[CVAR_LOG])
 		{
 			new szAuthID[MAX_AUTHID_LENGTH], szIP[MAX_IP_LENGTH];
 			get_user_authid(id, szAuthID, charsmax(szAuthID));
@@ -308,18 +308,18 @@ public client_putinserver(id)
 	{
 		new iTarget = cmd_target(id, szArgName, CMDTARGET_ALLOW_SELF);
 
-		if(!iTarget)
+		if (!iTarget)
 		{
 			return PLUGIN_HANDLED;
 		}
 
-		if(is_user_alive(iTarget))
+		if (is_user_alive(iTarget))
 		{
 			console_print(id, "%l", "UR_ERROR_ALIVE");
 			return PLUGIN_HANDLED;
 		}
 
-		if(get_member(iTarget, m_iTeam) != TEAM_TERRORIST && get_member(iTarget, m_iTeam) != TEAM_CT)
+		if (get_member(iTarget, m_iTeam) != TEAM_TERRORIST && get_member(iTarget, m_iTeam) != TEAM_CT)
 		{
 			console_print(id, "%l", "UR_ERROR_TEAM");
 			return PLUGIN_HANDLED;
@@ -327,12 +327,12 @@ public client_putinserver(id)
 
 		rg_round_respawn(iTarget);
 
-		if(bNeedSetHealth)
+		if (bNeedSetHealth)
 		{
 			set_entvar(iTarget, var_health, flHealth);
 		}
 
-		if(bNeedSetArmor)
+		if (bNeedSetArmor)
 		{
 			rg_set_user_armor(iTarget, iArmor, iArmorType);
 		}
@@ -345,7 +345,7 @@ public client_putinserver(id)
 
 @func_ClCmdReviveMenu(const id)
 {
-	if(!has_flag(id, g_eCvar[CVAR_ACCESS]))
+	if (!has_flag(id, g_eCvar[CVAR_ACCESS]))
 	{
 		console_print(id, "%l", "UR_ERROR_HAVE_NO_ACCESS");
 		return PLUGIN_HANDLED;
@@ -357,16 +357,16 @@ public client_putinserver(id)
 
 func_ReviveMenu(const id, iPage, bool:bChat = false)
 {
-	if(iPage < 0)
+	if (iPage < 0)
 	{
 		return PLUGIN_HANDLED;
 	}
 
 	new iPlayerCount;
 
-	for(new i = 1; i <= MaxClients; i++)
+	for (new i = 1; i <= MaxClients; i++)
 	{
-		if(!is_user_connected(i) || is_user_alive(i) || get_member(i, m_iTeam) != TEAM_TERRORIST && get_member(i, m_iTeam) != TEAM_CT || !g_eCvar[CVAR_BOT_SUPPORT] && is_user_bot(i))
+		if (!is_user_connected(i) || is_user_alive(i) || get_member(i, m_iTeam) != TEAM_TERRORIST && get_member(i, m_iTeam) != TEAM_CT || !g_eCvar[CVAR_BOT_SUPPORT] && is_user_bot(i))
 		{
 			continue;
 		}
@@ -385,7 +385,7 @@ func_ReviveMenu(const id, iPage, bool:bChat = false)
 	new iPagesNum = (iPlayerCount / PLAYERS_PER_PAGE + ((iPlayerCount % PLAYERS_PER_PAGE) ? 1 : 0));
 	new iLen = formatex(szMenu, charsmax(szMenu), "\y%l \d\R%d/%d^n^n", "UR_MENU_TITLE", iPage + 1, iPagesNum);
 
-	for(new a = iStart, iPlayer; a < iEnd; ++a)
+	for (new a = iStart, iPlayer; a < iEnd; ++a)
 	{
 		iPlayer = g_iMenuPlayers[id][a];
 
@@ -393,9 +393,9 @@ func_ReviveMenu(const id, iPage, bool:bChat = false)
 		iLen += formatex(szMenu[iLen], charsmax(szMenu) - iLen, "\y%d. \w%n^n", ++iMenuItem, iPlayer);
 	}
 
-	if(!iMenuItem)
+	if (!iMenuItem)
 	{
-		if(bChat)
+		if (bChat)
 		{
 			client_print_color(id, print_team_red, "%l", "UR_ERROR_MENU_PLAYERS");
 		}
@@ -409,7 +409,7 @@ func_ReviveMenu(const id, iPage, bool:bChat = false)
 	iLen += formatex(szMenu[iLen], charsmax(szMenu) - iLen, "\y8. \w%l^n", "UR_MENU_ARMOR", g_iArmor[id]);
 	iKeys |= (MENU_KEY_8);
 
-	if(iEnd != iPlayerCount)
+	if (iEnd != iPlayerCount)
 	{
 		formatex(szMenu[iLen], charsmax(szMenu) - iLen, "^n\y9. \w%l^n\y0. \w%l", "UR_NEXT", iPage ? "UR_BACK" : "UR_EXIT");
 		iKeys |= (MENU_KEY_9);
@@ -450,7 +450,7 @@ func_ReviveMenu(const id, iPage, bool:bChat = false)
 			new iTarget = g_iMenuPlayers[id][(g_iMenuPosition[id] * PLAYERS_PER_PAGE) + iKey];
 			new TeamName:iTargetTeam = get_member(iTarget, m_iTeam);
 
-			if(is_user_alive(iTarget) || iTargetTeam != TEAM_TERRORIST && iTargetTeam != TEAM_CT)
+			if (is_user_alive(iTarget) || iTargetTeam != TEAM_TERRORIST && iTargetTeam != TEAM_CT)
 			{
 				func_ReviveMenu(id, g_iMenuPosition[id]);
 				return PLUGIN_HANDLED;
@@ -485,7 +485,7 @@ func_AfterReviveAction(const id, const iTarget)
 		}
 	}
 
-	if(g_eCvar[CVAR_LOG])
+	if (g_eCvar[CVAR_LOG])
 	{
 		new szAuthID[MAX_AUTHID_LENGTH], szIP[MAX_IP_LENGTH];
 		get_user_authid(id, szAuthID, charsmax(szAuthID));
@@ -508,15 +508,15 @@ func_AfterReviveAction(const id, const iTarget)
 	new szArgHealth[10];
 	read_argv(arg_health, szArgHealth, charsmax(szArgHealth));
 
-	if(!szArgHealth[0])
+	if (!szArgHealth[0])
 	{
 		client_print_color(id, print_team_red, "%l", "UR_ERROR_MENU_USAGE_ZERO");
 		return PLUGIN_HANDLED;
 	}
 
-	if(szArgHealth[0])
+	if (szArgHealth[0])
 	{
-		if(!is_digit_arg(szArgHealth))
+		if (!is_digit_arg(szArgHealth))
 		{
 			client_print_color(id, print_team_red, "%l", "UR_ERROR_MENU_USAGE_DIGIT");
 			return PLUGIN_HANDLED;
@@ -537,15 +537,15 @@ func_AfterReviveAction(const id, const iTarget)
 	new szArgArmor[10];
 	read_argv(arg_armor, szArgArmor, charsmax(szArgArmor));
 
-	if(!szArgArmor[0])
+	if (!szArgArmor[0])
 	{
 		client_print_color(id, print_team_red, "%l", "UR_ERROR_MENU_USAGE_ZERO");
 		return PLUGIN_HANDLED;
 	}
 
-	if(szArgArmor[0])
+	if (szArgArmor[0])
 	{
-		if(!is_digit_arg(szArgArmor))
+		if (!is_digit_arg(szArgArmor))
 		{
 			client_print_color(id, print_team_red, "%l", "UR_ERROR_MENU_USAGE_DIGIT");
 			return PLUGIN_HANDLED;
@@ -563,9 +563,9 @@ stock is_digit_arg(szArg[])
 {
 	new bool:bIsDigit = true;
 
-	for(new iCharacter, iLen = strlen(szArg); iCharacter < iLen; iCharacter++)
+	for (new iCharacter, iLen = strlen(szArg); iCharacter < iLen; iCharacter++)
 	{
-		if(!isdigit(szArg[iCharacter]))
+		if (!isdigit(szArg[iCharacter]))
 		{
 			bIsDigit = false;
 			break;
