@@ -14,9 +14,15 @@ UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
 UR_MENU_TITLE = Choose who will be respawned
 UR_MENU_HEALTH = Health: \y%0.f
 UR_MENU_ARMOR = Armor: \y%d
+UR_ERROR_HAVE_NO_ACCESS = You have no access to use this command
 UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No players found to revive
 UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1You didn't enter anything, try again
 UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1You entered not a number, try again
+
+UR_CVAR_ACCESS = Admin access to console command to revive players.
+UR_CVAR_BOT_SUPPORT = Bot support.^n0 - disabled support^n1 - enabled
+UR_CVAR_MESSAGES = Show messages.^n0 - disabled^n1 - show only to who used the command and who was revived^n2 - show to everyone
+UR_CVAR_LOG = Logging when someone is revived.^n0 - disabled^n1 - enabled
 
 UR_BACK = Back
 UR_NEXT = Next
@@ -38,9 +44,15 @@ UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
 UR_MENU_TITLE = Selecciona quien será revivido
 UR_MENU_HEALTH = HP: \y%0.f
 UR_MENU_ARMOR = Armadura: \y%d
+UR_ERROR_HAVE_NO_ACCESS = No tiene acceso para usar este comando
 UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No se han encontrado jugadores para revivir
 UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1No has introducido nada, prueba de nuevo
 UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1No has introducido un número, prueba de nuevo
+
+UR_CVAR_ACCESS = Admin access to console command to revive players.
+UR_CVAR_BOT_SUPPORT = Bot support.^n0 - disabled support^n1 - enabled
+UR_CVAR_MESSAGES = Show messages.^n0 - disabled^n1 - show only to who used the command and who was revived^n2 - show to everyone
+UR_CVAR_LOG = Logging when someone is revived.^n0 - disabled^n1 - enabled
 
 UR_BACK = Atrás
 UR_NEXT = Siguiente
@@ -62,9 +74,15 @@ UR_REVIVED_TEAM_LOG = "%n" (<%s> <%s>) -----> %s
 UR_MENU_TITLE = Выберите кого возродить
 UR_MENU_HEALTH = Здоровье: \y%0.f
 UR_MENU_ARMOR = Броня: \y%d
+UR_ERROR_HAVE_NO_ACCESS = У Вас нет доступа для использований данной команды
 UR_ERROR_MENU_PLAYERS = ^3[UR] ^1Не найдено игроков для воскрешения
 UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1Вы ничего не ввели, попробуйте снова
 UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1Вы ввели не число, попробуйте снова
+
+UR_CVAR_ACCESS = Доступ для использования команд для воскрешения игроков.
+UR_CVAR_BOT_SUPPORT = Поддержка ботов.^n0 - выкл.^n1 - вкл.
+UR_CVAR_MESSAGES = Вывод сообщений.^n0 - откл.^n1 - только тому кто воскресил и кого воскресили^n2 - всем
+UR_CVAR_LOG = Логирование воскрешений.^n0 - выкл.^n1- вкл.
 
 UR_BACK = Назад
 UR_NEXT = Далее
