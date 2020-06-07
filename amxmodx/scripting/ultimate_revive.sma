@@ -11,7 +11,7 @@
 public stock const PluginName[] = "Ultimate Revive";
 public stock const PluginVersion[] = "1.0.7";
 public stock const PluginAuthor[] = "twisterniq";
-public stock const PluginURL[] = "https://github.com/twisterniq/Ultimate-Revive";
+public stock const PluginURL[] = "https://github.com/twisterniq/amxx-ultimate-revive";
 public stock const PluginDescription[] = "Adds the ability to respawn a player/team/everyone through console command or menu with the option to set HP and armor";
 
 new const CONFIG_NAME[] = "ultimate_revive";
