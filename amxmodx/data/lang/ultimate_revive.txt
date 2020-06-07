@@ -19,8 +19,8 @@ UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No players found to revive
 UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1You didn't enter anything, try again
 UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1You entered not a number, try again
 
-UR_CVAR_ACCESS = Admin access to console command to revive players.
-UR_CVAR_BOT_SUPPORT = Bot support.^n0 - disabled support^n1 - enabled
+UR_CVAR_ACCESS = Access to revive players.
+UR_CVAR_BOT_SUPPORT = Bot support.^n0 - disabled^n1 - enabled
 UR_CVAR_MESSAGES = Show messages.^n0 - disabled^n1 - show only to who used the command and who was revived^n2 - show to everyone
 UR_CVAR_LOG = Logging when someone is revived.^n0 - disabled^n1 - enabled
 
@@ -49,10 +49,10 @@ UR_ERROR_MENU_PLAYERS = ^3[UR] ^1No se han encontrado jugadores para revivir
 UR_ERROR_MENU_USAGE_ZERO = ^3[UR] ^1No has introducido nada, prueba de nuevo
 UR_ERROR_MENU_USAGE_DIGIT = ^3[UR] ^1No has introducido un número, prueba de nuevo
 
-UR_CVAR_ACCESS = Admin access to console command to revive players.
-UR_CVAR_BOT_SUPPORT = Bot support.^n0 - disabled support^n1 - enabled
-UR_CVAR_MESSAGES = Show messages.^n0 - disabled^n1 - show only to who used the command and who was revived^n2 - show to everyone
-UR_CVAR_LOG = Logging when someone is revived.^n0 - disabled^n1 - enabled
+UR_CVAR_ACCESS = Acceso para poder revivir a los jugadores
+UR_CVAR_BOT_SUPPORT = Soporte de bots.^n0 - deshabilitado^n1 - habilitado
+UR_CVAR_MESSAGES = Mostrar mensajes.^n0 - deshabilitado^n1 - mostrar solo al que revive y al que haya sido revivido^n2 - mostrar a todos
+UR_CVAR_LOG = Loguear cuando alguien revive a alguien.^n0 - deshabilitado^n1 - habilitado
 
 UR_BACK = Atrás
 UR_NEXT = Siguiente
